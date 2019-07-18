@@ -1,7 +1,7 @@
-# SwiftTips
+## SwiftTips
 Interesting things from Swift language
 
-# Optionals
+### Optionals
 
 Assign value only when current value is not nil:
 ```
@@ -18,3 +18,12 @@ Mapping optionals:
 let maybe: Int? = 7
 let mappedMaybe = maybe.map { $0 * 6 }
 ```
+
+Looping over non-nil values:
+```
+for value? in maybeValues {
+  // here value is unwrapped, nil values are filtered out
+}
+```
+
+
