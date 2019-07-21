@@ -3,7 +3,7 @@ Interesting things from Swift language
 
 ### Optionals
 
-Assign value only when current value is not nil:
+#### Assign value only when current value is not nil
 ```
 var maybe: Int? = nil
 maybe? = 42
@@ -13,13 +13,13 @@ maybe? = 42
 // maybe = 42
 ```
 
-Mapping optionals:
+#### Mapping optionals
 ```
 let maybe: Int? = 7
 let mappedMaybe = maybe.map { $0 * 6 }
 ```
 
-Looping over non-nil values:
+#### Looping over non-nil values
 ```
 let maybeValues: [Int?] = [1, 2,3,nil]
 for case let value? in maybeValues {
@@ -42,4 +42,13 @@ for case nil in maybeValues {
 }
 ```
 
+#### Comparing equality of optional and non-optional values
+When comparing Optional vs Non-Optional Swift will promote Non-Optional to Optional in order to apply equality check on two Optionals.
+
+```
+let maybe7: Int? = 7
+if maybe7 == 7 {
+    print("it's seven!")
+}
+```
 
